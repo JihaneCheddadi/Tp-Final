@@ -54,10 +54,7 @@ for (let i = 0; i < stagiaires.length; i++) {
   });
 
   deleteButton.addEventListener("click", function () {
-    const index = stagiaires.findIndex(function (stagiaire) {
-      return (stagiaire.id = stagiaires[i].id);
-    });
-
+    index = i;
     stagiaires.splice(index, 1);
     localStorage.setItem("stagiaires", JSON.stringify(stagiaires));
     window.location = "./listesDesStagiaires.html";
